@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>QCM JavaScript</title>
+</head>
+
+<body>
+                <div id="quiz-container">
+                                <div class="question" data-id="1">
+                                                <p>Qui est Brendan Eich ?</p>
+                                                <input type="radio" name="question_1" value="a" id="q1a">
+                                                <label for="q1a">Le fils de Douglas Eich</label><br>
+                                                <input type="radio" name="question_1" value="b" id="q1b">
+                                                <label for="q1b">Le ministre de l'éducation Finlandaise</label><br>
+                                                <input type="radio" name="question_1" value="c" id="q1c">
+                                                <label for="q1c">Le créateur de Javascript</label><br>
+                                                <input type="radio" name="question_1" value="d" id="q1d">
+                                                <label for="q1d">L'inventeur de Chat GPT</label><br>
+
+                                </div>
+
+                                <div class="question" data-id="2">
+                                                <p>Javascript a été créé à partir de Java ?</p>
+                                                <input type="radio" name="question_2" value="a" id="q2a">
+                                                <label for="q2a">Vrai</label><br>
+                                                <input type="radio" name="question_2" value="b" id="q2b">
+                                                <label for="q2b">Faux</label><br>
+                                </div>
+
+                                <div class="question" data-id="3">
+                                                <p>Qu'est-ce qu'un objet en JS ?</p>
+                                                <input type="radio" name="question_3" value="a" id="q3a">
+                                                <label for="q3a">Une paire de clés</label><br>
+                                                <input type="radio" name="question_3" value="b" id="q3b">
+                                                <label for="q3b">Une entité cosmique</label><br>
+                                                <input type="radio" name="question_3" value="c" id="q3c">
+                                                <label for="q3c">Un conteneur d'informations</label><br>
+                                                <input type="radio" name="question_3" value="d" id="q3d">
+                                                <label for="q3d">Rien d'intéressant</label><br>
+                                </div>
+                </div>
+
+                <button onclick="checkAnswers()">Soumettre</button>
+
+                <script>
+                                function checkAnswers() {
+                                                const questions = document.querySelectorAll('.question');
+                                                let score = 0;
+
+                                                questions.forEach(question => {
+                                                                const questionId = question.getAttribute('data-id');
+                                                                const selectedAnswer = document.querySelector(`input[name="question_${questionId}"]:checked`);
+
+                                                                if (selectedAnswer) {
+                                                                                const userAnswer = selectedAnswer.value;
+                                                                                const correctAnswer = question.dataset.correct;
+
+                                                                                if (userAnswer === correctAnswer) {
+                                                                                                score++;
+                                                                                }
+                                                                }
+                                                });
+
+                                                alert(`Votre score : ${score} / ${questions.length}`);
+                                }
+                </script>
+</body>
+
+</html>

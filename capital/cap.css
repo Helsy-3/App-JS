@@ -1,0 +1,15 @@
+body {
+                font-family: Arial, sans-serif;
+}
+
+#question-container {
+                text-align: center;
+}
+
+input[type='text'] {
+                margin-top: 10px;
+}
+
+button {
+                margin-top: 10px;
+}
