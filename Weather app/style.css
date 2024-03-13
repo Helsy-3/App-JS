@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    margin-top:4rem;
+    margin-top: 4rem;
     width: 22rem;
     height: 28rem;
     background-color: white;
@@ -13,7 +13,8 @@ body {
     padding: 1rem;
 }
 
-.main, .input-part {
+.main,
+.input-part {
     text-align: center;
 }
 
@@ -28,13 +29,15 @@ h1 {
     margin: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
     margin: 1rem;
 }
 
 .degrees {
     color: black
 }
+
 .main {
     text-align: center;
     height: 1rem;
@@ -50,7 +53,7 @@ h2, h3 {
     border: none;
     margin-top: 0.5rem;
     border-radius: 6px;
-    background-color: royalblue;
+    background-color: red;
     color: white;
     cursor: pointer;
 }
